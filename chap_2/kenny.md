@@ -8,7 +8,7 @@ JSX를 이용했을 때와 그렇지 않았을 때의 차이는 크다.
 
 |JSX|no JSX|
 -|-
-![alt text](image.png)|![alt text](image-1.png)
+<img width="408" height="237" alt="image" src="https://github.com/user-attachments/assets/e27c6eb4-2cfb-4b6e-b23a-4a74bfd92bde" />|<img width="447" height="373" alt="image" src="https://github.com/user-attachments/assets/992488af-b8f0-4f74-921e-fcd8adb258ba" />
 
 # 2.2 JSX의 장점
 
@@ -51,7 +51,7 @@ JSX 문자열을 이해하는 렉서와 구문 분석기가 필요하다.
 
 이를 Babel, TypeScript, Traceur, SWC같은 도구가 해결해준다.
 
-![alt text](image-2.png)
+<img width="381" height="400" alt="image" src="https://github.com/user-attachments/assets/1737aa83-eb8b-4fd5-a3d8-f88877b6a65e" />
 
 그렇기에 JSX는 빌드가 필요하다. 코드가 바닐라 JS로 변환되어 최종 배포 번들에 포함되는 과정을 transpile이라고 하는데, 코드를 변환 후 컴파일 한다는 말이다.
 
@@ -65,7 +65,7 @@ JSX에서는 ‘<’같은 JSX 프라그마가 함수 호출로 변환된다. (J
 
 JSX 프라그마는 React.createElement 대신 ‘<’ 문자를 사용하는 별칭일 뿐이다.
 
-![alt text](image-3.png)
+<img width="435" height="147" alt="image" src="https://github.com/user-attachments/assets/1917a70a-1d33-40f1-8fbf-9ea4c7c6f69c" />
 
 # 2.6 표현식
 
@@ -114,7 +114,7 @@ UI를 변경할 때 마다 가상 DOM을 먼저 업데이트하고, 실제 변�
 
 DOM은 웹 페이지의 현 상태를 실시간으로 표현하여, 상호작용대로 계속 업데이트된다.
 
-![image.png](attachment:267c5aa3-52a1-4b43-b34b-41782ef07b8c:image.png)
+<img width="806" height="368" alt="image" src="https://github.com/user-attachments/assets/93b18993-1e95-46d9-9ae7-9618f35dfdff" />
 
 document.querySelector 메서드는 CSS 선택자를 기반으로 DOM에서 엘리먼트를 선택한다.
 (DFS 알고리즘으로 엘리먼트를 탐색한다고 하네요)
@@ -167,4 +167,5 @@ document.getElementById("myList").appendChild(fragment);
 - 문서 조각은 DOM을 업데이트하기 전, 변경 사항을 그룹화하여 최적화
     - 가상 DOM은 앱 UI 전반에 걸쳐 차이점을 파악, 일괄 업데이트로 최적화 극대화
     - 문서 조각 관련 복잡한 작업을 개발자가 모르게 내부적으로 처리
+
 
