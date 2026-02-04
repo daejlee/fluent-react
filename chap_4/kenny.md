@@ -10,7 +10,8 @@
 
 문서 조각과 유사하게, 여러 가상 DOM 업데이트를 모아 한 번의 DOM 업데이트로 결합해 실제 DOM에 대한 업데이트를 일괄 처리한다.
 
-![image.png](attachment:fa38cf15-7072-485e-a73d-b6eed3778dca:image.png)
+<img width="428" height="343" alt="image" src="https://github.com/user-attachments/assets/db9308c8-e521-4593-babe-f5bb8c217f1b" />
+
 
 실제 DOM이라면 3번 바뀌어야 하지만, 가상 DOM은 3번의 변화를 한 번으로 끝낼 수 있다.
 
@@ -79,7 +80,7 @@ const ul = {
 
 이 기술을 더블 버퍼링이라고 한다. 이 더블 버퍼링은 커밋 단계에서 수행된다.
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/907641dc-2bf8-4fd3-8c6a-84e5873017ac/93b84933-3dc3-47ed-84ab-dcc065048ef7/image.png)
+<img width="1458" height="912" alt="image" src="https://github.com/user-attachments/assets/28ded2f3-0b3b-465e-86cd-2df3a0a813e9" />
 
 현재 UI 렌더링을 위한 트리인 `current`를 기준으로 업데이트가 발생하면 파이버는 리액트에서 새로 받은 데이터로 새로운 `workInProgress` 트리를 빌드하고, 작업이 끝나면 다음 렌더링에 이 트리를 사용한다. 최종적으로 렌더링되어 반영이 끝나면 `current`가 `workInProgress`로 변경된다.
 
