@@ -35,7 +35,7 @@ input 필드가 바뀔 때 마다 TodoList 전체가 리렌더링 된다. 상태
 특히, 렌더링 비용이 많이 드는 중첩된 컴포넌트가 여러 개 있는 복잡한 컴포넌트의 경우,
 내부의 각 컴포넌트를 메모화하면 최적화가 가능하다.
 
-![image.png](attachment:81945063-b711-4b56-8b7b-1cc2e5f59349:image.png)
+<img width="570" height="498" alt="image" src="https://github.com/user-attachments/assets/2f5e6b45-39fc-4854-85fc-b40b178a206d" />
 
 ## 5.1.1 React.memo에 능숙해지기
 
@@ -45,6 +45,6 @@ input 필드가 바뀔 때 마다 TodoList 전체가 리렌더링 된다. 상태
 
 React.memo는 프롭에 얕은 비교를 수행한다. JS의 스칼라 타입은 비교가 정확하지만, 않은 값들도 있다.
 
-![image.png](attachment:83a66ba3-b163-44aa-82a6-728e2b4853d4:image.png)
+<img width="339" height="167" alt="image" src="https://github.com/user-attachments/assets/f2155cc9-3780-4aac-8d1e-b7d2ff09d555" />
 
 이런 경우 useMemo , 함수 참조인 경우 useCallback으로 메모화하면 문제가 해결된다.
