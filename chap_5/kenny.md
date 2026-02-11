@@ -136,7 +136,7 @@ presentation component / container component 두 가지로 컴포넌트를 나�
 - presentation: UI를 렌더링
 - container: UI의 상태를 처리
 
-![image.png](attachment:ba2011c7-2ec4-4f5b-99d8-43725d9ce879:image.png)
+<img width="426" height="600" alt="image" src="https://github.com/user-attachments/assets/86655de7-2b13-477c-b9a9-915e5ad639c0" />
 
 그러나 훅이 도입되고 이전보다 훨씬 편리하게 컴포넌트에 상태를 추가하며 컨테이너가 상태를 공급하지 않게 되었다. 이 패턴은 훅으로 대채할 수 있다. 다만 여전히 활용할 수 있고, 훅과 사용할 수도 있다.
 
@@ -176,9 +176,9 @@ const withAsync = (Component) => (props) => {
 
 여러 고차 컴포넌트를 합성할수가 있다. 다만 중첩된 HOC 호출은 유지 보수하기 어려워진다.
 
-![image.png](attachment:a13a3043-27d9-485a-9cba-2e25671f5fd9:image.png)
+<img width="674" height="310" alt="image" src="https://github.com/user-attachments/assets/d30de07d-2bf5-456a-984a-eb0f17f4d199" />
 
-![image.png](attachment:2d777eb0-378f-4713-b01b-f554f20275f6:image.png)
+<img width="296" height="300" alt="image" src="https://github.com/user-attachments/assets/ffd24b54-cb01-44eb-aa5f-98631a09b240" />
 
 여러 HOC를 하나의 HOC로 합성하는 유틸 함수를 작성하는 것이 낫다.
 
@@ -249,13 +249,13 @@ const WindowSize = (props) => {
 
 제어 컴포넌트를 먼저 살펴보면, 내부에 자체 상태를 유지하지 않는 컴포넌트다. 부모 컴포넌트가 단일 정보 출처의 역할을 한다. 상태가 변경되어야 하면 onChange같은 콜백 함수로 부모에게 알린다.
 
-![image.png](attachment:9758dcc7-2616-4bd8-ab4a-4a88b1eadb35:image.png)
+<img width="690" height="230" alt="image" src="https://github.com/user-attachments/assets/8bf583a1-2c7d-469a-adee-2f09ace20055" />
 
 제어 프롭 패턴은 제어 컴포넌트의 원리를 확장한다. 컴포넌트는 외부에서 프롭으로 제어될 수 있고, 자체적으로 내부 상태를 관리할 수 있다.
 
 이 패턴은 제어 및 비제어 작동 모드를 모두 제공해 유연성을 향상시킨다.
 
-![image.png](attachment:5d740a3f-1d96-43ac-abda-d1f04e6fc8d1:image.png)
+<img width="476" height="467" alt="image" src="https://github.com/user-attachments/assets/d04a6f3e-38f4-44db-a461-e2dedb60e5ea" />
 
 <aside>
 	
@@ -288,7 +288,7 @@ export const droppableProps = {
 
 ### 프롭 게터
 
-![image.png](attachment:e281c918-1cc0-4dec-a3ff-2933771d5c30:image.png)
+<img width="585" height="459" alt="image" src="https://github.com/user-attachments/assets/5fd6e4fd-1c35-44dd-9df9-8fb03d97a284" />
 
 프롭 게터는 함수로, 사용자 정의 함수를 인수로 받아 기본값과 함께 조합한다.
 
