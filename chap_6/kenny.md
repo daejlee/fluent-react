@@ -20,13 +20,13 @@ https://www.youtube.com/watch?v=kUs-fH1k-aM
 
 </aside>
 
-![image.png](attachment:0cc8c2a0-e7eb-4b6d-a835-0f281c0040d4:image.png)
+<img width="655" height="215" alt="image" src="https://github.com/user-attachments/assets/8e4f462c-ebbf-41c2-ab69-afe6df14c82f" />
 
 CSR에서의 네트워크 워터폴. SSR에서는 JS 다운로드 전에 렌더링된 HTML을 클라이언트에 스트리밍한다. 렌더링 후 관련 JS를 읽어들이는 과정을 하이드레이션이라고 한다.
 
-![image.png](attachment:e0f1b961-f72a-42b5-9b57-7e7818974f8c:image.png)
-
-![image.png](attachment:9f3329d5-6333-4f1c-868e-642932b5ea74:image.png)
+|csr|ssr|
+-|-
+|<img width="745" height="590" alt="image" src="https://github.com/user-attachments/assets/a9482978-fd86-458a-b3f5-b79eafc811da" />|<img width="636" height="575" alt="image" src="https://github.com/user-attachments/assets/f106b712-a4de-4de7-a5cd-f4c445b717c4" />|
 
 ## 6.1.3 보안
 
@@ -53,9 +53,9 @@ SSR된 HTML은 상호 작용이 부족하다. 필요한 JS를 HTML 마크업에 
 
 일부는 하이드레이션이 필요 이상으로 느리다며 resumability(재개 가능성)을 대안으로 꼽는다. SSR 결과물로 HTML을 렌더링한 후 JS 번들을 다운로드, 이벤트 리스너를 추가해 클라이언트를 효과적으로 “리렌더링”해야한다.
 
-![image.png](attachment:d39ffbf4-81f4-4982-9e03-f0a78c56281e:image.png)
-
-![image.png](attachment:1caca5de-246d-454f-9b1b-bb099e3e3ad9:image.png)
+|하이드레이션|재개 가능성|
+-|-
+|<img width="641" height="310" alt="image" src="https://github.com/user-attachments/assets/ae269498-34a8-4f4e-baf9-8242967036ea" />|<img width="662" height="324" alt="image" src="https://github.com/user-attachments/assets/ee719a22-ba3b-4b40-bcda-ab6c5a4ed749" />|
 
 resumability를 활용하면 전체 앱이 서버에서 렌더링되고, 브라우저로 스트리밍된다. 모든 인터렉티브 동작이 직렬화되어 전송된다. 하이드레이션 없이 역직렬화 후 반응한다. TTI(Time to Interactive)가 짧아진다.
 
@@ -118,13 +118,11 @@ Node.js 스트림은 스트림 간 데이터 파이프가 가능한데, 읽기 �
 
 여기서 하이드레이션 에러를 더 잘 이해할 수 있는데, 하이드레이션을 시도하는 리액트 번들은 서버에서 생성한 HTML 형상과 현재 바라볼 HTML 형상이 같길 기대한다.
 
-서버에서 <div>안녕</div>를 구워서 write를 했는데, 클라에서 <div>바이</div>가 있는 상황인 것임.
+서버에서 `<div>안녕</div>`를 구워서 write를 했는데, 클라에서 `<div>바이</div>`가 있는 상황인 것임.
 
 - **시간/날짜:** 서버는 '오후 11시'에 HTML을 구웠는데, 스트리밍되어 브라우저에 도착해 하이드레이션될 때는 '오후 11시 1초'가 된 경우.
 - **브라우저 전용 API:** 서버 컴포넌트에서 `window`나 `localStorage`에 접근하려 할 때 (서버에는 이런 게 없으므로 결과물이 달라짐).
 - **잘못된 HTML 구조:** `p` 태그 안에 `div`를 넣는 등 브라우저가 자동으로 HTML 구조를 보정해버리는 경우 (서버가 보낸 원본과 브라우저 파서가 보정한 결과가 달라짐).
-
-(알게된 점: next의 use client는 csr이 아니다.)
 
 ## 6.5.3 renderToReadableStream
 
