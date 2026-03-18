@@ -105,7 +105,8 @@ async function navigate(url) {
 }
 ```
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/907641dc-2bf8-4fd3-8c6a-84e5873017ac/211c00f1-f19c-4a9c-bff3-b035ff8a5c21/image.png)
+<img width="409" height="428" alt="image" src="https://github.com/user-attachments/assets/8c11ea2f-cb9f-4975-989a-52027b05ea23" />
+
 
 서버에서는 jsx-only 헤더를 받으면 전체 HTML 문자열을 반환하지 않고 다음 페이지의 JSX 트리 객체만 응답하게끔 해야한다.
 
@@ -115,18 +116,30 @@ async function navigate(url) {
 
 RSC에 장점이 많지만, 서버 컴포넌트와 클라이언트 컴포넌트 두 종류의 컴포넌트를 고려해야 한다.
 
+<img width="574" height="282" alt="image" src="https://github.com/user-attachments/assets/fa9cc228-e72e-4596-87bb-e765f54b3040" />
+
 <aside>
 
-    💡
-
-    ![image.png](attachment:01bb268c-f0dc-4488-807f-61fe59802134:image.png)
-
-    왜 이 컴포넌트는 서버 컴포넌트가 안되나요?
+    💡왜 이 컴포넌트는 서버 컴포넌트가 안되나요?
 
     - 클라이언트 전용 API useState를 사용
     	- useState가 왜?: 서버는 상태 개념이 여러 클라에 걸쳐 공유됨. 보안 위험이 되기 때문에 RSC는 서버에서 useState 사용을 지원하지 않음.
     	- useState에서 반환하는 setState 디스패처 함수는 직렬화가 안됨
     - 함수는 왜 직렬화가 안되나요 - 함수의 클로저와 스코프 전체를 추적해 직렬화 하는게 현실적으로 불가능 - 서버 실행 함수와 클라 실행 함수가 다름. NodeAPI와 WebAPI의 차이처럼
+
+```
+	const secret = "top-secret-key";
+
+	function getServerData() {
+	  return fetch(`https://api.com?key=${secret}`); 
+	}
+```
+- 위의 getServerData 함수를 직렬화해서 브라우저로 보낸다고 가정해 봅시다. 함수 본문인 return fetch(...)는 문자열로 보낼 수 있겠지만, 함수 밖에 있는 secret 변수는 어떻게 할까요?
+- secret 변수까지 같이 직렬화해서 보내야 할까요?
+  - 만약 그 변수가 또 다른 객체를 참조하고 있다면요?
+- 이처럼 함수가 의존하고 있는 주변 환경(렉시컬 환경) 전체를 추적해서 직렬화하는 것은 기술적으로 거의 불가능에 가깝습니다.
+
+
 
 </aside>
 
